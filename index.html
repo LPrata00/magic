@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<title>Mágica</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <style>
+      .calculadora {
+        margin-top: 40px;
+        border: solid 1px #000;
+        padding: 20px;
+        background-color: #2E2E2E;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px #000;
+      }
+
+      .titulo{
+        color: white;
+        width: 400px;
+        font-size: 200%;
+      }
+
+      .btn {
+        
+        height: 100px;
+        margin: 5px;
+        box-shadow: 1px 1px 1px #000;
+      }
+      .campo_resposta{
+        margin-top: 50px;
+        height: 200px;
+        width: 200px;
+        margin-left: 100px;
+        background-color: white;
+      }
+
+      .clear {
+        width: 130px;
+      }
+
+      .enter {
+        height: 50px;
+      }
+
+
+      .resultado {
+        text-align: right;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border: solid 1px #000;
+        box-shadow: 1px 1px 1px #000;
+      }
+
+      #resposta{
+        margin-top: 10px;
+        height: 80px;
+      }
+
+      #resposta1{
+        margin-top: 10px;
+        height: 80px;
+    }
+
+    </style>
+	</head>
+
+  <body style="background: #D9D9D9">
+
+    <div class="container">
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <br />
+
+          <div class="calculadora">
+            <h1 class="titulo">Pense em um número de 1 a 10 e digite no campo abaixo:</h1>
+            <input id="resultado" type="text" class="form-control resultado" />
+            
+
+            <div class="row">
+              <button onclick="calcular()" type="button" class="btn btn-dark btn-lg enter">Clique no botão para que a mágica aconteça:</button>
+            </div>
+
+            <div class="row" >
+                <div class= "campo_resposta">
+                <input id="resposta1" type="text" class="form-control" disabled="disabled" />
+                <input id="resposta" type="text" class="form-control" disabled="disabled" />
+                </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>    
+
+    <script>
+      function calcular(){
+        var number = document.getElementById('resultado').value
+        number = number.trim()
+        console.log(number)
+        document.getElementById('resposta1').value = 'O numero pensado foi:'
+        document.getElementById('resposta').value = number
+      }
+    </script>
+  </body>	
+
+</html>
